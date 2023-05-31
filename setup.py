@@ -1,12 +1,25 @@
-import setuptools
+from setuptools import setup, find_packages
 
-setuptools.setup(
-    name='pnsgraph',
-    version='0.0.1',
-    packages=setuptools.find_packages(),
-    url='',
-    license='',
-    author='jftapia',
-    author_email='',
-    description=''
-)
+VERSION = '0.0.1'
+DESCRIPTION = 'P-graph Algorithms for Process Network Synthesis'
+LONG_DESCRIPTION = 'The translation of P-graph algorithms (MSG, SSG) to Python. Comes with the default LP model'
+
+setup(name='pnsgraph',
+      version='0.0.2',
+      description='P-graph Algorithms for Proces network synthesis',
+      author='John Frederick D. Tapia',
+      author_email='john.frederick.tapia@dlsu.edu.ph',
+      packages= find_packages(),
+      url='https://github.com/fredtapia/PNS-Graph',
+      install_requires=['pulp', 'itertools'],  # add any additional packages that
+      # needs to be installed along with your package. Eg: 'car'
+
+      keywords=['P-graph', 'Process Network Synthesis}'],
+      classifiers=[
+            "Development Status :: 3 - Alpha",
+            "Intended Audience :: Education",
+            "Programming Language :: Python :: 3",
+            "Operating System :: MacOS :: MacOS X",
+            "Operating System :: Microsoft :: Windows",
+      ]
+      )

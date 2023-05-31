@@ -1,6 +1,13 @@
 Metadata-Version: 2.1
 Name: pnsgraph
-Version: 0.0.1
-Home-page: 
-Author: jftapia
-Author-email: 
+Version: 0.0.2
+Summary: P-graph Algorithms for Proces network synthesis
+Home-page: https://github.com/fredtapia/PNS-Graph
+Author: John Frederick D. Tapia
+Author-email: john.frederick.tapia@dlsu.edu.ph
+Keywords: P-graph,Process Network Synthesis}
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
