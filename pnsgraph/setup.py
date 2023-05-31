@@ -10,7 +10,7 @@ setup(name='pnsgraph',
       author='John Frederick D. Tapia',
       author_email='john.frederick.tapia@dlsu.edu.ph',
       packages= find_packages(),
-      url='https://github.com/fredtapia/PNS-Graph'
+      url='https://github.com/fredtapia/PNS-Graph',
       install_requires=['pulp', 'itertools'],  # add any additional packages that
       # needs to be installed along with your package. Eg: 'car'
 
