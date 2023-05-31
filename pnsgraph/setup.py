@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 VERSION = '0.0.1'
-DESCRIPTION = 'P-graph Algorithms for Process Network Syntheis'
+DESCRIPTION = 'P-graph Algorithms for Process Network Synthesis'
 LONG_DESCRIPTION = 'The translation of P-graph algorithms (MSG, SSG) to Python. Comes with the default LP model'
 
 setup(name='pnsgraph',
@@ -9,11 +9,12 @@ setup(name='pnsgraph',
       description='P-graph Algorithms for Proces network synthesis',
       author='John Frederick D. Tapia',
       author_email='john.frederick.tapia@dlsu.edu.ph',
-      packages = find_packages(),
+      packages= find_packages(),
+      url='https://github.com/fredtapia/PNS-Graph'
       install_requires=['pulp', 'itertools'],  # add any additional packages that
       # needs to be installed along with your package. Eg: 'car'
 
-      keywords=['P-graph', 'Process Network Syntheis}'],
+      keywords=['P-graph', 'Process Network Synthesis}'],
       classifiers=[
             "Development Status :: 3 - Alpha",
             "Intended Audience :: Education",
