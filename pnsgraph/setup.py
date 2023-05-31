@@ -5,7 +5,7 @@ DESCRIPTION = 'P-graph Algorithms for Process Network Syntheis'
 LONG_DESCRIPTION = 'The translation of P-graph algorithms (MSG, SSG) to Python. Comes with the default LP model'
 
 setup(name='pnsgraph',
-      version='0.1',
+      version='0.0.2
       description='P-graph Algorithms for Proces network synthesis',
       author='John Frederick D. Tapia',
       author_email='john.frederick.tapia@dlsu.edu.ph',
