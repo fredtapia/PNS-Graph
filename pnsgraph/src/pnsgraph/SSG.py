@@ -1,5 +1,5 @@
-import MSG
-import pgraph as nd
+from . import MSG
+from . import pgraph as nd
 from pulp import *
 from itertools import chain, combinations
 
