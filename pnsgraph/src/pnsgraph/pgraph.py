@@ -1,6 +1,4 @@
-import MSG
-import SSG
-
+import MSG, SSG
 
 class MaterialNode:
     def __init__(self, name, price=0.0, demand_upper=1e12, demand_lower=0.0):
