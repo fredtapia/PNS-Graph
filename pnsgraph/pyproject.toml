@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pnsgraph"
-version = "0.0.4"
+version = "0.0.5"
 authors = [
     { name="John Frederick Tapia", email="john.frederick.tapia@dlsu.edu.ph"},
 ]
