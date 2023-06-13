@@ -10,7 +10,6 @@ authors = [
 ]
 description = "Python Implementation of P-graph Algorithms for Process Network Synthesis"
 readme = "README.md"
-install_requires = ['pulp', 'itertools']
 requires-python = ">=3.7"
 license = {file="LICENSE"}
 keywords = ['p-graph', 'network', 'process synthesis']
