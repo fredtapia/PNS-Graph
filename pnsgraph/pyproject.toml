@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pnsgraph"
-version = "0.0.3"
+version = "0.0.4"
 authors = [
     { name="John Frederick Tapia", email="john.frederick.tapia@dlsu.edu.ph"},
 ]
@@ -19,7 +19,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = ['pulp', 'itertools']
 
 [project.urls]
 "Homepage" = "https://github.com/fredtapia/PNS-Graph"
