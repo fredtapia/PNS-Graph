@@ -1,14 +1,14 @@
-from . import MSG
-from . import pgraph as nd
+from pnsgraph.MSG import *
+from pnsgraph import pgraph as nd
 from pulp import *
 from itertools import chain, combinations
 
 def maximalMappingver2(process):
     maximal_map = {}
-    materials = MSG.listMaterial(process)
+    materials = listMaterial(process)
     for i in materials:
         maximal_map[i] = []
-        for j in MSG.setP(process):
+        for j in setP(process):
             if i in j[1]:
                 maximal_map[i].append(j)
         maximal_map[i] = set(maximal_map[i])
@@ -25,9 +25,9 @@ def maximalMappingMaterial(process, x):
 
 def complementMapver2(process, mapping:dict, x):
     if x in mapping:
-        complement = set(maximalMappingMaterial(MSG.setP(process), x)) - mapping[x]
+        complement = set(maximalMappingMaterial(setP(process), x)) - mapping[x]
     else:
-        complement = set(maximalMappingMaterial(MSG.setP(process), x))
+        complement = set(maximalMappingMaterial(setP(process), x))
     return {x: complement}
 
 def powerSetNoEmpty(set):
@@ -62,7 +62,7 @@ def SSGbranchCondition(unit, material_set:list, process, mapping:dict, product):
 #x = product, m = material_list, c = unit, R = raw_materials, delta = mapping
 def mappingUpdate(material_list, product, product_list, unit, raw_materials, mapping):
     material_set = set(material_list) | set([product])
-    product_set = (set(product_list) | set(MSG.inputMaterials(unit))) - (set(raw_materials) | set(material_list) | set([product]))
+    product_set = (set(product_list) | set(inputMaterials(unit))) - (set(raw_materials) | set(material_list) | set([product]))
     mapping_new = mapping.copy()
     mapping_new[product] = set(unit)
     #print("New Material Set: ", material_set)
@@ -73,15 +73,15 @@ def mappingUpdate(material_list, product, product_list, unit, raw_materials, map
 def SSG_nb_condition(mapping, unit, process_list):
     solution = set.union(*list(mapping.values()))
     units_in_solution_structure = [j for k in solution for j in process_list if k == j.unitFlow]
-    input_mats = MSG.inputMaterials(units_in_solution_structure)
-    new_input = MSG.inputMaterials(list(unit))
+    input_mats = inputMaterials(units_in_solution_structure)
+    new_input = inputMaterials(list(unit))
     if set(input_mats) & set(new_input):
         return False
     else:
         return True
 
 def SSG(process, product:list, raw_materials):
-    process = MSG.setP(process)
+    process = setP(process)
     mats = []
     maps = {}
     solution_structure =[]
@@ -105,7 +105,7 @@ def SSG(process, product:list, raw_materials):
 
 
 def SSG_nb(process, product:list, raw_materials):
-    process = MSG.setP(process)
+    process = setP(process)
     mats = []
     maps = {}
     solution_structure = []

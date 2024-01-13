@@ -22,7 +22,11 @@ polygen += pg.OperatingUnitEdged("Absorption Chiller", {electricity:0.01, hot_wa
 polygen += pg.OperatingUnitEdged("Mechanical Chiller", {electricity:0.17}, {cooling:1.17, chilled_water:1}, var_cap_cost=0.10, fixed_cap_cost=0.15833)
 polygen += pg.OperatingUnitEdged("Cooling Tower", {electricity:0.1}, {cooling:1}, var_cap_cost=0.030, fixed_cap_cost=0.0305)
 
-polygen.generateEdges(pg.GraphEdge)
+#polygen.runMSG()
+#maximal_structure = polygen.MSGStructure
+
+polygen.runSSGLP()
+optimal_structure = polygen.optimal_solutions
 
 
 

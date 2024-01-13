@@ -1,5 +1,5 @@
-from .MSG import *
-from .SSG import *
+from pnsgraph.MSG import *
+from pnsgraph.SSG import *
 
 class MaterialNode:
     def __init__(self, name, price=0.0, demand_upper=1e12, demand_lower=0.0):
@@ -105,17 +105,17 @@ class PNSproblem:
         return self.edges
 
     def runMSG(self):
-        self.MSGStructure = MSG.MSG(operunitstoprocess(self.units), self.products, self.rawmaterial)
+        self.MSGStructure = MSG(operunitstoprocess(self.units), self.products, self.rawmaterial)
         return self
 
     def runSSG(self):
         self.runMSG()
-        structures = SSG.SSG(operunitstoprocess(self.units), self.products, self.rawmaterial)
-        self.SSGsolutions = SSG.SSG_translate(structures, self.units)
+        structures = SSG(operunitstoprocess(self.units), self.products, self.rawmaterial)
+        self.SSGsolutions = SSG_translate(structures, self.units)
         return self
 
     def runSSGLP(self):
-        self.optimal_solutions = SSG.SSGplusLP(self.units, self.products, self.rawmaterial, self.otherdata)
+        self.optimal_solutions = SSGplusLP(self.units, self.products, self.rawmaterial, self.otherdata)
 
 
 def operunitstoprocess(operating_units_list: list):
