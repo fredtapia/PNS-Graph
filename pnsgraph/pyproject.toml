@@ -17,7 +17,6 @@ keywords = ['p-graph', 'network', 'process synthesis']
 classifiers = [
     "Programming Language :: Python :: 3",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 
